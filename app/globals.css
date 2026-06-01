@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #172038;
+  background: #fffaf0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(114, 223, 37, 0.12), transparent 26rem),
+    linear-gradient(180deg, #fffaf0 0%, #ffffff 44%, #fffaf0 100%);
+  color: #172038;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.accent-bars {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 104px;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.accent-bars span:nth-child(1) {
+  background: #72df25;
+}
+
+.accent-bars span:nth-child(2) {
+  background: #8c075a;
+}
+
+.accent-bars span:nth-child(3) {
+  background: #07136b;
+}
+
+.accent-bars span:nth-child(4) {
+  background: #4024b9;
+}
+
+.accent-bars span:nth-child(5) {
+  background: #d94fdc;
+}
+
+.accent-bars span:nth-child(6) {
+  background: #f199d9;
+}

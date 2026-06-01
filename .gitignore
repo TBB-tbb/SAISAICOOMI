@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+*.log
+public/logs/contact-form.log
+.env*.local
+
+# Source assets kept outside the built Next.js project.
+/1COCO-Sugar.webp
+/2COCO-Cream.webp
+/3COCO-Vinegar.webp
+/4COCO-Candy.webp
+/AS409843371.jpeg
+/★AS409843371.jpeg
+/Back用素材.jpg
+/CallingCard.jpg
+/HOME配置イメージ.pdf
