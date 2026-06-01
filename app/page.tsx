@@ -109,7 +109,7 @@ export default function Home() {
                   FOOD IMPORT & SELECT
                 </span>
               </div>
-              <h1 className="text-[30px] font-medium leading-[1.42] tracking-[0.12em] text-brand-navy">
+              <h1 className="text-[30px] font-bold leading-[1.42] tracking-[0.12em] text-brand-navy">
                 <span className="block">世界には、</span>
                 <span className="block">まだ知られていない</span>
                 <span className="block">美味しいものが</span>
@@ -117,6 +117,7 @@ export default function Home() {
               </h1>
               <p className="mt-8 max-w-[600px] text-[15px] font-semibold leading-8 tracking-[0.08em] text-slate-600">
                 私たちは、素材や製法、生産者の想いにこだわった食品を厳選し、
+                <br />
                 「これは美味しい！」と心から感じた商品をご紹介しています。
               </p>
               <p className="mt-5 text-[15px] font-semibold leading-8 tracking-[0.08em] text-slate-600">
