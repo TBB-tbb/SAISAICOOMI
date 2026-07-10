@@ -19,7 +19,7 @@ export function PageTitle({ title, label, lead }: PageTitleProps) {
         {title}
       </h1>
       {lead ? (
-        <p className="mt-5 max-w-2xl text-base leading-8 text-slate-700">{lead}</p>
+        <p className="mt-5 max-w-2xl whitespace-pre-line text-base leading-8 text-slate-700">{lead}</p>
       ) : null}
     </section>
   );

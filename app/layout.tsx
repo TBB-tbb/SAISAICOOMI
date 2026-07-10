@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   },
   description:
     "SAISAICOOMI JAPAN 株式会社は、素材や製法、生産者の想いにこだわった食品をご紹介する食品輸入・販売会社です。",
+  manifest: "/icon/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon/favicon.ico" },
+      { url: "/icon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/icon/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   robots: {
     index: false,
     follow: false,

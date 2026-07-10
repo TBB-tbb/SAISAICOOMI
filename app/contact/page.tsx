@@ -11,7 +11,8 @@ export default function ContactPage() {
       <PageTitle
         title="お問合せ"
         label="CONTACT"
-        lead="商品やお取引に関するお問い合わせは、以下のフォームよりお送りください。"
+        lead={`商品やお取引に関するお問い合わせは、以下のフォームよりお送りください。
+Please feel free to contact us.`}
       />
       <section className="content-shell pb-20">
         <form
@@ -27,6 +28,8 @@ export default function ContactPage() {
             <label className="block">
               <span className="mb-2 block font-bold text-brand-navy">
                 お名前 <span className="text-brand-wine">必須</span>
+                <br />
+                <span className="text-sm font-semibold text-slate-600">Name</span>
               </span>
               <input
                 name="name"
@@ -36,7 +39,13 @@ export default function ContactPage() {
               />
             </label>
             <label className="block">
-              <span className="mb-2 block font-bold text-brand-navy">お名前（フリガナ）</span>
+              <span className="mb-2 block font-bold text-brand-navy">
+                お名前（フリガナ）
+                <br />
+                <span className="text-sm font-semibold text-slate-600">
+                  ※This field is used only by Japanese names.
+                </span>
+              </span>
               <input
                 name="kana"
                 type="text"
@@ -45,7 +54,21 @@ export default function ContactPage() {
             </label>
             <label className="block">
               <span className="mb-2 block font-bold text-brand-navy">
+                会社名
+                <br />
+                <span className="text-sm font-semibold text-slate-600">Company name</span>
+              </span>
+              <input
+                name="company"
+                type="text"
+                className="w-full rounded-2xl border border-brand-navy/15 bg-brand-cream/50 px-4 py-3 outline-none transition focus:border-brand-navy focus:bg-white"
+              />
+            </label>
+            <label className="block">
+              <span className="mb-2 block font-bold text-brand-navy">
                 メールアドレス <span className="text-brand-wine">必須</span>
+                <br />
+                <span className="text-sm font-semibold text-slate-600">Email address</span>
               </span>
               <input
                 name="email"
@@ -57,6 +80,8 @@ export default function ContactPage() {
             <label className="block">
               <span className="mb-2 block font-bold text-brand-navy">
                 お電話番号 <span className="text-brand-wine">必須</span>
+                <br />
+                <span className="text-sm font-semibold text-slate-600">Phone Number with country code</span>
               </span>
               <input
                 name="tel"
@@ -68,6 +93,8 @@ export default function ContactPage() {
             <label className="block md:col-span-2">
               <span className="mb-2 block font-bold text-brand-navy">
                 お問い合わせ内容 <span className="text-brand-wine">必須</span>
+                <br />
+                <span className="text-sm font-semibold text-slate-600">Inquiry</span>
               </span>
               <textarea
                 name="message"
@@ -83,6 +110,8 @@ export default function ContactPage() {
               className="w-full rounded-full bg-brand-navy px-8 py-4 text-sm font-bold tracking-[0.14em] text-white transition hover:bg-brand-wine md:w-auto md:min-w-64"
             >
               送信する
+              <br />
+              <span className="text-xs font-bold">send an email</span>
             </button>
           </div>
         </form>

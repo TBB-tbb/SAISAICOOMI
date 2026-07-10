@@ -6,7 +6,7 @@ mb_internal_encoding('UTF-8');
 date_default_timezone_set('Asia/Tokyo');
 
 const SITE_NAME = 'SAISAICOOMI JAPAN';
-const ADMIN_EMAIL = 'info@example.com';
+const ADMIN_EMAIL = 'yamatsuba0325@gmail.com';
 const LOG_LEVEL = 'debug'; // debug, info, error, none
 
 $logDir = __DIR__ . '/logs';
@@ -116,6 +116,7 @@ if ($website !== '') {
 
 $name = postValue('name');
 $kana = postValue('kana');
+$company = postValue('company');
 $email = postValue('email');
 $tel = postValue('tel');
 $message = postValue('message');
@@ -168,33 +169,38 @@ SAISAICOOMI JAPAN 公式サイトよりお問い合わせがありました。
 {$message}
 EOT;
 
-$userSubject = '【' . SITE_NAME . '】お問い合わせありがとうございます';
+$userSubject = 'お問い合わせありがとうございます';
 $userBody = <<<EOT
-{$name} 様
+{$name}様
 
-この度は SAISAICOOMI JAPAN へお問い合わせいただき、ありがとうございます。
-以下の内容でお問い合わせを受け付けました。
+この度はお問い合わせいただき、誠にありがとうございます。
+Thank you for your inquiry.
 
-お名前：
+以下の内容にてお問い合わせを承りました。
+
+【お名前】
 {$name}
 
-お名前（フリガナ）：
-{$kana}
+【会社名】
+{$company}
 
-メールアドレス：
+【メールアドレス】
 {$email}
 
-お電話番号：
-{$tel}
-
-お問い合わせ内容：
+【お問い合わせ内容】
 {$message}
 
-内容を確認のうえ、担当者よりご連絡いたします。
+内容を確認の上、担当よりご連絡致します。
+We will get back to you from the person in charge.
 
-SAISAICOOMI JAPAN
+なお、お問い合わせ内容によっては、ご返信までにお時間をいただく場合がございますので、あらかじめご了承下さい。
+
+──────────────────
+SASAICOOMI JAPAN 株式会社
+メール：info@saisaicoomi.jp
+ホームページ：http://saisaicoomi.jp/
+──────────────────
 EOT;
-
 $adminSent = mb_send_mail(ADMIN_EMAIL, $adminSubject, $adminBody, $headers);
 writeLog('ADMIN_MAIL_RESULT', [
     'success' => $adminSent ? 'true' : 'false',
